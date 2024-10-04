@@ -26,7 +26,7 @@ export const guest = (() => {
 
 
     const countDownDate1 = () => {
-        const until = document.getElementById('count-down1').getAttribute('data-time1').replace(' ', 'C');
+        const until = document.getElementById('count-down1').getAttribute('data-time1').replace(' ', 'T');
 
         const count = (new Date(until)).getTime();
 
