@@ -23,7 +23,7 @@ export const progress = (() => {
 
         loaded += 1;
         bar.style.width = Math.min((loaded / total) * 100, 100).toString() + "%";
-        info.innerText = `Loading ${type} complete (${loaded}/${total}) [${parseInt((loaded / total) * 100).toFixed(0)}%]`;
+        info.innerText = `Tải ${type} Hoàn Thành (${loaded}/${total}) [${parseInt((loaded / total) * 100).toFixed(0)}%]`;
 
         if (loaded === total) {
             onComplete();
@@ -39,7 +39,7 @@ export const progress = (() => {
     };
 
     const invalid = (type) => {
-        info.innerText = `Error loading ${type} (${loaded}/${total}) [${parseInt((loaded / total) * 100).toFixed(0)}%]`;
+        info.innerText = `Lỗi tải lại trang ${type} (${loaded}/${total}) [${parseInt((loaded / total) * 100).toFixed(0)}%]`;
         bar.style.backgroundColor = 'red';
         valid = false;
     };
@@ -66,7 +66,7 @@ export const progress = (() => {
 
         info = document.getElementById('progress-info');
         bar = document.getElementById('progress-bar');
-        info.style.display = 'block';
+       // info.style.display = 'block';
 
         push = false;
         run();
