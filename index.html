@@ -827,6 +827,37 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.js"
         integrity="sha256-mvTaORw+RTgKnX6ZHT4P5Sc9DNP2TBpSGII7F3sT8iE=" crossorigin="anonymous"></script>
     <script src="./js/app.js" type="module"></script>
+
+    <script>
+        // Chặn chuột phải
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          alert('Chức năng chuột phải đã bị vô hiệu hóa!');
+        });
+      
+        // Chặn tổ hợp phím (Ctrl+U, Ctrl+C, Ctrl+X, F12)
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'F12' || 
+              (e.ctrlKey && e.key === 'u') || 
+              (e.ctrlKey && e.key === 'c') || 
+              (e.ctrlKey && e.key === 'x') || 
+              (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key))) {
+            e.preventDefault();
+            alert('Phím tắt này đã bị vô hiệu hóa!');
+          }
+        });
+      
+        // Chặn chọn văn bản
+        document.addEventListener('selectstart', function(e) {
+          e.preventDefault();
+        });
+      
+        // Chặn kéo thả
+        document.addEventListener('dragstart', function(e) {
+          e.preventDefault();
+        });
+      </script>
+      
 </body>
 
 </html>
