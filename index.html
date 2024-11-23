@@ -781,31 +781,29 @@
 
         <section class="dark-section bg-black">
 
-                            <!-- Love animation -->
-                    <div class="position-relative">
-                        <div class="position-absolute" style="top: 0%; right: 10%;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                                class="opacity-50" onload="util.animate(this, 3000, 'animate-love')"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+            <!-- Love animation -->
+            <div class="position-relative">
+                <div class="position-absolute" style="top: 0%; right: 10%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                        class="opacity-50" onload="util.animate(this, 3000, 'animate-love')" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    </svg>
+                </div>
+            </div>
 
 
 
-                    <!-- Love animation -->
-                    <div class="position-relative">
-                        <div class="position-absolute" style="top: 0%; left: 10%;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                                class="opacity-50" onload="util.animate(this, 2000, 'animate-love')"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                            </svg>
-                        </div>
-                    </div>
+            <!-- Love animation -->
+            <div class="position-relative">
+                <div class="position-absolute" style="top: 0%; left: 10%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                        class="opacity-50" onload="util.animate(this, 2000, 'animate-love')" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    </svg>
+                </div>
+            </div>
             <div class="container pb-5 pt-4">
                 <div class="card-body border rounded-5 shadow p-3">
 
@@ -815,13 +813,23 @@
                     <div id="carousel-image-one" data-aos="fade-up" data-aos-duration="1500" class="carousel slide"
                         data-bs-ride="carousel">
 
-                        
-                            <!-- <video controls style="width: 100%;">
+
+
+                        <div id="videoPopup" class="popup">
+                            <button id="closePopup">×</button>
+                            <video id="videoElement" controls>
+                                <source src="./assets/images/6061127532927.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+
+
+                        <!-- <video controls style="width: 100%;">
                                 <source src="./assets/images/6061127532927.mp4" style="width: 100%; height: 500px;">
                             </video>
                     
                -->
-                            <video id="VIDEO22_player" class="iframe-video-preload" data-video-type="direct" data-autoplay="undefined" style="width: 100%; height: 100%; top: 0; left: 0; object-fit: cover;" poster="https://w.ladicdn.com/s369x225/5c728619c417ab07e5194baa/video-1-20240607071447-bqhg8.png" preload="auto" controlslist="nodownload" loop="" controls="" src="./assets/images/6061127532927.mp4"></video>
+                        <!-- <video id="VIDEO22_player" class="iframe-video-preload" data-video-type="direct" data-autoplay="undefined" style="width: 100%; height: 100%; top: 0; left: 0; object-fit: cover;" poster="https://w.ladicdn.com/s369x225/5c728619c417ab07e5194baa/video-1-20240607071447-bqhg8.png" preload="auto" controlslist="nodownload" loop="" controls="" src="./assets/images/6061127532927.mp4"></video> -->
 
 
 
@@ -946,6 +954,34 @@
         });
       </script>
        -->
+
+
+
+
+    <script>
+        // Lấy các phần tử cần thiết
+        const videoPopup = document.getElementById('videoPopup');
+        const closePopup = document.getElementById('closePopup');
+        const videoElement = document.getElementById('videoElement');
+
+        // Mở pop-up (thêm class "active")
+        function showPopup() {
+            videoPopup.classList.add('active');
+        }
+
+        // Đóng pop-up và dừng video
+        function hidePopup() {
+            videoPopup.classList.remove('active');
+            videoElement.pause(); // Dừng phát video
+            videoElement.currentTime = 0; // Đưa video về đầu
+        }
+
+        // Gắn sự kiện cho nút đóng
+        closePopup.addEventListener('click', hidePopup);
+
+        // Bạn có thể gọi showPopup() khi cần mở video
+
+    </script>
 </body>
 
 </html>
