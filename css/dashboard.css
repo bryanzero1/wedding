@@ -58,3 +58,37 @@
     color: var(--bs-light) !important;
     background-color: var(--bs-danger) !important;
 }
+
+
+.popup {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup video {
+    max-width: 100%;
+  }
+  
+  .popup.active {
+    display: block; /* Hiển thị khi cần */
+  }
+  
+  #closePopup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
