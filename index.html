@@ -395,6 +395,8 @@
                         <br>
                         <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
                             <div class="row justify-content-center" data-time="2025-01-05 00:00:00" id="count-down">
+                                <h2 class="kufam " id="countdown-message" > </h2>
+
                                 <div class="col-3 p-1">
                                     <h2 class="d-inline m-0 p-0" id="day">0</h2><small
                                         class="ms-1 me-0 my-0 p-0 d-inline">Ngày</small>
@@ -417,6 +419,7 @@
 
 
                     </div>
+                    <div id="countdown"></div>
 
 
                     <div class="overflow-x-hidden">
@@ -469,6 +472,9 @@
                         <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
 
                             <div class="row justify-content-center" data-time1="2025-01-24 00:00:00" id="count-down1">
+
+                               <h2 class="kufam " id="countdown-message1"> </h2>
+
                                 <div class="col-3 p-1">
                                     <h2 class="d-inline m-0 p-0" id="day1">0</h2><small
                                         class="ms-1 me-0 my-0 p-0 d-inline">Ngày</small>
@@ -744,7 +750,7 @@
                     <div id="carousel-image-one" data-aos="fade-up" data-aos-duration="1500" class="carousel slide"
                         data-bs-ride="carousel">
 
-                            <video playsinline controls id="VIDEO22_player" class="iframe-video-preload" data-video-type="direct" data-autoplay="undefined" style="width: 100%; height: 100%; top: 0; left: 0; object-fit: cover;" poster="https://w.ladicdn.com/s369x225/5c728619c417ab07e5194baa/video-1-20240607071447-bqhg8.png" preload="auto" controlslist="nodownload" loop="" controls="" src="./assets/images/6061127532927.mp4"></video>
+                            <video playsinline controls  id="VIDEO22_player" class="iframe-video-preload" data-video-type="direct" data-autoplay="undefined" style="width: 100%; height: 100%; top: 0; left: 0; object-fit: cover;" poster="https://w.ladicdn.com/s369x225/5c728619c417ab07e5194baa/video-1-20240607071447-bqhg8.png" preload="auto" controlslist="nodownload" loop="" controls="" src="./assets/images/6061127532927.mp4"></video>
 
                     </div>
 
@@ -804,9 +810,11 @@
 
     <!-- Audio Button -->
     <button type="button" id="button-music" style="display: none;"
-        class="btn bg-dark border border-2 btn-sm rounded-circle btn-music" onclick="audio.button(this)"
+       
+    class="btn bg-dark border border-2 btn-sm rounded-circle btn-music" onclick="audio.button(this)"
         data-url="./assets/music/sound.mp3">
         <i class="fa-solid fa-circle-pause spin-button"></i>
+        
     </button>
 
 
