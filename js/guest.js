@@ -25,7 +25,7 @@ export const guest = (() => {
                 document.getElementById('hour').innerText = "0";
                 document.getElementById('minute').innerText = "0";
                 document.getElementById('second').innerText = "0";
-                document.getElementById('countdown-message').innerText = "ĐÃ ĐẾN GIỜ !"; // Thêm thông báo
+                document.getElementById('countdown-message').innerText = "ĐÃ KẾT THÚC !"; // Thêm thông báo
                 // Hiển thị phần tử #countdown-message và áp dụng transition
             document.getElementById('countdown-message').style.marginTop = "10px";
             document.getElementById('countdown-message').style.fontSize = "30px"; 
