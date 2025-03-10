@@ -11,63 +11,53 @@ export const guest = (() => {
 
 
     const countDownDate = () => {
-        // Thời gian đích là 11 giờ ngày 5 tháng 1 năm 2025
-        const count = new Date("2025-01-05T11:00:00").getTime();
-    
-        const interval = setInterval(() => {
-            const now = new Date().getTime(); // Lấy thời gian hiện tại
-            const distance = count - now; // Tính toán thời gian còn lại
-    
-            // Nếu thời gian đếm ngược đã kết thúc
-            if (distance <= 0) {
-                clearInterval(interval); // Dừng việc đếm ngược
-                document.getElementById('day').innerText = "0";
-                document.getElementById('hour').innerText = "0";
-                document.getElementById('minute').innerText = "0";
-                document.getElementById('second').innerText = "0";
-                document.getElementById('countdown-message').innerText = "ĐÃ KẾT THÚC !"; // Thêm thông báo
-                // Hiển thị phần tử #countdown-message và áp dụng transition
-            document.getElementById('countdown-message').style.marginTop = "10px";
-            document.getElementById('countdown-message').style.fontSize = "30px"; 
-                return;
-            }
-    
-            // Tính toán số ngày, giờ, phút và giây còn lại
-            document.getElementById('day').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById('hour').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById('minute').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById('second').innerText = Math.floor((distance % (1000 * 60)) / 1000);
-        }, 1000); // Cập nhật mỗi giây
-    };
+        
+  
+    // Ngày bắt đầu đếm ngày
+    const startDate =  new Date("2025-01-05T11:00:00").getTime();
+
+    const interval = setInterval(() => {
+    const now = new Date().getTime(); // Lấy thời gian hiện tại
+    const distance = now - startDate; // Tính toán thời gian đã trôi qua
+
+    // Tính toán số ngày, giờ, phút và giây còn lại
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Hiển thị số ngày, giờ, phút và giây còn lại
+    document.getElementById('day').innerText = days;
+    document.getElementById('hour').innerText = hours;
+    document.getElementById('minute').innerText = minutes;
+    document.getElementById('second').innerText = seconds;
+
+    }, 1000); // Cập nhật mỗi giây
+
+                  };
     
 
 
     const countDownDate1 = () => {
-        // Thời gian đích là 11 giờ ngày 5 tháng 1 năm 2025
-        const count = new Date("2025-01-24T10:00:00").getTime();
-    
-        const interval = setInterval(() => {
-            const now = new Date().getTime(); // Lấy thời gian hiện tại
-            const distance = count - now; // Tính toán thời gian còn lại
-    
-            // Nếu thời gian đếm ngược đã kết thúc
-            if (distance <= 0) {
-                clearInterval(interval); // Dừng việc đếm ngược
-                document.getElementById('day1').innerText = "0";
-                document.getElementById('hour1').innerText = "0";
-                document.getElementById('minute1').innerText = "0";
-                document.getElementById('second1').innerText = "0";
-                document.getElementById('countdown-message1').innerText = "ĐÃ ĐẾN GIỜ !"; // Thêm thông báo
-                document.getElementById('countdown-message1').style.marginTop = "10px";
-                document.getElementById('countdown-message1').style.fontSize = "30px"; 
-                return;
-            }
-    
-            // Tính toán số ngày, giờ, phút và giây còn lại
-            document.getElementById('day1').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById('hour1').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById('minute1').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById('second1').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const startDate =  new Date("2025-01-24T10:00:00").getTime();
+
+    const interval = setInterval(() => {
+    const now = new Date().getTime(); // Lấy thời gian hiện tại
+    const distance = now - startDate; // Tính toán thời gian đã trôi qua
+
+    // Tính toán số ngày, giờ, phút và giây còn lại
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Hiển thị số ngày, giờ, phút và giây còn lại
+    document.getElementById('day1').innerText = days;
+    document.getElementById('hour1').innerText = hours;
+    document.getElementById('minute1').innerText = minutes;
+    document.getElementById('second1').innerText = seconds;
+
         }, 1000); // Cập nhật mỗi giây
     };
     
@@ -218,35 +208,35 @@ export const guest = (() => {
 
 
 
-function countdown(targetDate) {
-    // Lấy phần tử HTML để hiển thị thời gian đếm ngược
-    const countdownElement = document.getElementById("countdown1");
+// function countdown(targetDate) {
+//     // Lấy phần tử HTML để hiển thị thời gian đếm ngược
+//     const countdownElement = document.getElementById("countdown1");
 
-    // Cập nhật thời gian đếm ngược mỗi giây
-    const interval = setInterval(function() {
-        const now = new Date().getTime(); // Lấy thời gian hiện tại
-        const timeLeft = targetDate - now; // Tính toán thời gian còn lại
+//     // Cập nhật thời gian đếm ngược mỗi giây
+//     const interval = setInterval(function() {
+//         const now = new Date().getTime(); // Lấy thời gian hiện tại
+//         const timeLeft = targetDate - now; // Tính toán thời gian còn lại
 
-        // Tính toán ngày, giờ, phút và giây
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+//         // Tính toán ngày, giờ, phút và giây
+//         const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+//         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+//         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
         
 
-        // Hiển thị thời gian đếm ngược
-        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+//         // Hiển thị thời gian đếm ngược
+//         countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-        // Nếu đếm ngược hoàn thành
-        if (timeLeft <= 0) {
-            clearInterval(interval);
-            countdownElement.innerHTML = "Đã đến giờ!";
-        }
-    }, 1000);
-}
+//         // Nếu đếm ngược hoàn thành
+//         if (timeLeft <= 0) {
+//             clearInterval(interval);
+//             countdownElement.innerHTML = "Đã đến giờ!";
+//         }
+//     }, 1000);
+// }
 
-// Thiết lập ngày mục tiêu (5 tháng 1, 2025, 11:00 AM)
-const targetDate = new Date("January 5, 2025 11:00:00").getTime();
+// // Thiết lập ngày mục tiêu (5 tháng 1, 2025, 11:00 AM)
+// const targetDate = new Date("January 5, 2025 11:00:00").getTime();
 
-// Gọi hàm đếm ngược
-countdown(targetDate);
+// // Gọi hàm đếm ngược
+// countdown(targetDate);
